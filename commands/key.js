@@ -18,7 +18,7 @@ const key = {
     const key = keyManager.setKey(input.key);
 
     if (key) {
-      console.log('API key set'.blue)
+      console.log('API key set'.blue);
     }
   },
   show() {
@@ -36,11 +36,11 @@ const key = {
   remove() {
     try {
       const keyManager = new KeyManager();
-      const key  = keyManager.getKey();
+      keyManager.deleteKey();
 
       console.log('Key removed'.blue);
 
-      return key;
+      return;
     } catch (err) {
       console.error('error ', err.message.red);
     }

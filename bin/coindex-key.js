@@ -1,5 +1,4 @@
 const program = require('commander');
-
 const key = require('../commands/key');
 
 program
@@ -18,3 +17,8 @@ program
   .action(key.remove);
 
 program.parse(process.argv);
+
+// If no args, output help
+if (!process.argv[2]) {
+  program.outputHelp();
+}

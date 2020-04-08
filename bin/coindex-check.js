@@ -9,7 +9,12 @@ program
     "Add specific coin types in CSV format",
     "BTC, ETH, XRP"
   )
-  .option("--curr <currency>", "Change the currrency", "USD")
-  .action((cmd) => check.price(cmd));
+  .option("--cur <currency>", "Change the currrency", "USD")
+  .action(cmd => check.price(cmd));
 
 program.parse(process.argv);
+
+// If no args, output help
+if (!process.argv[2]) {
+  program.outputHelp();
+}
