@@ -1,5 +1,5 @@
-const KeyManager = require('../lib/KeyManager');
-const CryptoAPI = require('../lib/CryptoAPI');
+const KeyManager = require("../lib/KeyManager");
+const CryptoAPI = require("../lib/CryptoAPI");
 
 const check = {
   async price(cmd) {
@@ -15,7 +15,7 @@ const check = {
     } catch (err) {
       console.error(err.message.red);
     }
-  }
+  },
 };
 
 module.exports = check;
