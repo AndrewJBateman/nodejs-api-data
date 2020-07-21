@@ -28,15 +28,15 @@ const key = {
       return key;
     }
 
-    // check if user input a key and that it is 12 characters long
-    else if (input.key.length === 12 && input.key.match(alphaNumeric)) {
+    // check if user input a key and that it is 32 characters long
+    else if (input.key.length === 32 && input.key.match(alphaNumeric)) {
       const key = keyManager.setKey(input.key);
       console.log("API key set".blue);
       return key;
     }
 
     // user to input key again if the input key was not an empty string or it was not 12 characters long
-    console.log("API key should be alphanumeric and 12 characters long. ".red + "Try again.".blue);
+    console.log("API key should be alphanumeric and 32 characters long. ".red + "Try again.".blue);
     return;
   },
 
