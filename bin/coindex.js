@@ -1,7 +1,8 @@
 #!/usr/bin/env node
+import { program } from "commander";
+import fs from "fs";
 
-const program = require("commander");
-const pkg = require("../package.json");
+const pkg = JSON.parse(fs.readFileSync('./package.json', 'utf8'))
 
 program
   .version(pkg.version)

@@ -1,9 +1,7 @@
-require("dotenv").config();
+import "dotenv/config";
+import inquirer from "inquirer";
+import KeyManager from "../lib/KeyManager.js";
 
-const inquirer = require("inquirer");
-const colors = require("colors");
-const KeyManager = require("../lib/KeyManager");
-const { isRequired } = require("../utils/validation");
 const alphaNumeric = /^[0-9a-zA-Z]+$/;
 
 const key = {
@@ -13,8 +11,9 @@ const key = {
       {
         type: "input",
         name: "key",
-        message: "Enter API key obtained from https://nomics.com or press ENTER to use default API key. "
-          .green,
+        message:
+          "Enter API key obtained from https://nomics.com or press ENTER to use default API key. "
+            .green,
         // validate: isRequired,
       },
     ]);
@@ -36,7 +35,10 @@ const key = {
     }
 
     // user to input key again if the input key was not an empty string or it was not 12 characters long
-    console.log("API key should be alphanumeric and 32 characters long. ".red + "Try again.".blue);
+    console.log(
+      "API key should be alphanumeric and 32 characters long. ".red +
+        "Try again.".blue
+    );
     return;
   },
 
@@ -67,4 +69,4 @@ const key = {
   },
 };
 
-module.exports = key;
+export default key;
