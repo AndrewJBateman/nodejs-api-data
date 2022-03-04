@@ -4,6 +4,7 @@
   "description": "App to display API data using nodejs",
   "main": "index.js",
   "bin": "./bin/coindex.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,11 +19,11 @@
   },
   "homepage": "https://github.com/AndrewJBateman/nodejs-api-data#readme",
   "dependencies": {
-    "axios": "^0.21.1",
+    "axios": "^0.26.0",
     "colors": "^1.4.0",
-    "commander": "^7.2.0",
+    "commander": "^9.0.0",
     "configstore": "^6.0.0",
-    "dotenv": "^10.0.0",
-    "inquirer": "^8.1.1"
+    "dotenv": "^16.0.0",
+    "inquirer": "^8.2.0"
   }
 }
