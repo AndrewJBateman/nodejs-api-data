@@ -1,6 +1,6 @@
 # :zap: Node.js API Data
 
-* [Node.js](https://nodejs.org/en/) Command Line Interface (CLI) app that takes an API key user input and outputs [nomics cryptocurrency API](https://nomics.com/) data. Tutorial code (see 'Inspiration' below)
+* [Node.js](https://nodejs.org/en/) Command Line Interface (CLI) app that takes an API key user input and outputs [nomics cryptocurrency API](https://nomics.com/) data. Tutorial code (see 'Inspiration' below) updated to use ES6 module imports etc.
 * **Note:** to open web links in a new window use: _ctrl+click on link_
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/AndrewJBateman/nodejs-api-data?style=plastic)
@@ -20,6 +20,7 @@
   * [:cool: Features](#cool-features)
   * [:clipboard: Status & To-Do List](#clipboard-status--to-do-list)
   * [:clap: Inspiration](#clap-inspiration)
+  * [:file_folder: License](#file_folder-license)
   * [:envelope: Contact](#envelope-contact)
 
 ## :books: General info
@@ -35,19 +36,20 @@
 
 ## :signal_strength: Technologies
 
-* [Node.js v14](https://nodejs.org/es/)
-* [commander v7](https://www.npmjs.com/package/commander) node.js CLI solution
+* [Node.js v16](https://nodejs.org/es/)
+* [commander v9](https://www.npmjs.com/package/commander) node.js CLI solution
 * [Inquirer v8](https://www.npmjs.com/package/inquirer) CLI user interface, used to prompt user for API key in `key.js` file
 * [configstore v6](https://www.npmjs.com/package/configstore) used in KeyManager class to load and persist the API key user input
 * [colors v1](https://www.npmjs.com/package/colors) to add colours to node.js (text colors: black, red, green, yellow, blue, magenta, cyan, white, grey. Other options available including bright colors etc.)
 * [nomics cryptocurrency API](https://p.nomics.com/cryptocurrency-bitcoin-api) for JSON crypto coin data
-* [axios v0.21.0](https://www.npmjs.com/package/axios) promise-based http client. `async/await` used instead of `.then()`
+* [axios v0.26.0](https://www.npmjs.com/package/axios) promise-based http client. `async/await` used instead of `.then()`
 * [Postman API v8](https://www.postman.com/downloads/) to GET JSON data from API
 
 ## :floppy_disk: Setup
 
 * Install dependencies using `npm i`
-* (Optional) Add a default 32-character key from [nomics cryptocurrency API](https://nomics.com/)
+* Create `.env` file
+* See `.env.example` then add a default 32-character key from [nomics cryptocurrency API](https://nomics.com/)
 * Type `npm link` to make all commands work from any CLI directory
 * Get yourself a 32-character key from [nomics cryptocurrency API](https://nomics.com/)
 * type `nodejs-api-data` to get top level commands list; `key` to manage API key, `check` to see crypto currency prices and `help`
@@ -57,7 +59,7 @@
 * type `nodejs-api-data key show`to display the API key
 * type `nodejs-api-data key delete`to delete the API key
 * type `nodejs-api-data check price`to see list of crypto currency prices.
-  * type `nodejs-api-data check price --coin=BTC` to see price and rank of BTC crypto (comma separated coin names (with NO spaces) used by API GET request - note: putting a coin name of ' ' (empty space) will return a list of ALL 2709 cryto coins!)
+* type `nodejs-api-data check price --coin=BTC` to see price and rank of BTC crypto (comma separated coin names (with NO spaces) used by API GET request - note: putting a coin name of ' ' (empty space) will return a list of ALL 2709 cryto coins!)
 
 ## :computer: Code Examples
 
@@ -101,11 +103,11 @@ async set() {
 ## :clipboard: Status & To-Do List
 
 * Status: Working
-* To-Do: Add functionality such as showing more data from the JSON API data returned. This is easy to do.
+* To-Do: Nothing
 
 ## :clap: Inspiration
 
-* [Node.js CLI For Cryptocurrency Prices](https://www.youtube.com/watch?v=-6OAHsde15E)
+* [Youtube: Traversy Media: httpsNode.js CLI For Cryptocurrency Prices](https://www.youtube.com/watch?v=-6OAHsde15E)
 * [nomics Crypto API documentation](http://docs.nomics.com/#operation/getCurrenciesTicker)
 
 
